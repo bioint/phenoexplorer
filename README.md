@@ -3,7 +3,7 @@ PhenoExplorer
 
 PhenoExplorer is a tool that supports cross-study data discovery among NHLBI genomic studies.
 
-Despite the vast amounts of genomic data (e.g., GWAS, sequencing, etc.) available in repositories such as dbGaP, lack of standardization makes identification of relevant datasets challenging for biomedical researchers interested in specific phenotypic measures. PFINDR provides a web-based query interface that allows researchers to identify studies and phenotype variables of interest from dbGaP data repository. It uses an ensemble of semantic similarity metrics for matching phenotypic variables, using machine learning and information retrieval techniques.
+Despite the vast amounts of genomic data (e.g., GWAS, sequencing, etc.) available in repositories such as dbGaP, lack of standardization makes identification of relevant datasets challenging for biomedical researchers interested in specific phenotypic measures. Phenoexplorer provides a web-based query interface that allows researchers to identify studies and phenotype variables of interest from dbGaP data repository. It uses an ensemble of semantic similarity metrics for matching phenotypic variables, using machine learning and information retrieval techniques.
 
 This project is funded by NHLBI's pFINDR program: Phenotype Finder IN Data Resources under grant number 1UH2HL108780.
 
