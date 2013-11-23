@@ -1,0 +1,318 @@
+Albumin	Alb
+Alb	Albumin
+Albumin-to-Creatinine Ratio	ACR Albumin creatinine ratio
+ACR	Albumin-to-Creatinine Ratio Albumin creatinine ratio
+Albumin creatinine ratio	ACR Albumin-to-Creatinine Ratio
+Alcohol	Alcoholic Ethanol alcoh
+Alcoholic	Alcohol Ethanol alcoh
+Ethanol	Alcoholic Alcohol alcoh
+alcoh	Ethanol Alcoholic Alcohol
+ABI	Ankle brachial index Arm blood pressure Ankle blood pressure brachial blood pressure
+Ankle brachial index	ABI Arm blood pressure Ankle blood pressure brachial blood pressure
+Aorta	Aortic
+Aortic	Aorta
+Apolipoprotein	Apo
+Apo	Apolipoprotein
+Aspirin	NSAIDS Arachidonic acid
+NSAIDS	Arachidonic acid Aspirin
+Arachidonic acid	NSAIDS Aspirin
+Afib	Atrial fibrillation AF Atrial fib
+AF	Afib Atrial fibrillation Atrial fib
+Atrial	fib Atrial fibrillation Afib Atrial fibrillation AF
+Atrial fibrillation	AF afib
+Avg	Average Mean
+BL	Baseline	
+Baso	Basophils
+Begin	Start
+Start	Begin
+Birth control pills	BCP BC Oral contraceptives
+BCP	Birth control pills BC Oral contraceptives
+BC	BCP Birth control pills Oral contraceptives
+Oral contraceptives	Birth control pills BCP BC
+Blood pressure	BP
+BP	Blood pressure
+Body mass index	BMI KG height weight
+BMI	Body mass index height weight					
+Body surface area	BSA
+BSA	Body surface area					
+Bone mineral density	BMD
+BMD	Bone mineral density					
+Calories	Kcal
+Kcal	Calories					
+Cancer	Malignant Tumor Malignancy
+Tumor	Malignant Cancer Malignancy
+Cardiovascular disease	CVD
+CVD	Cardiovascular disease						
+Cavities	Caries
+Caries	Cavities				
+Cholesterol medication	Cholesterol lowering Anti-cholesterol Statin Statins Anti-hypercholesterolemic Lipid Lowering Chol lowering
+Cholesterol lowering	Cholesterol medication Anti-cholesterol Statin Statins Anti-hypercholesterolemic Lipid Lowering Chol lowering
+Anti-cholesterol	Cholesterol lowering Cholesterol medication Statin Statins Anti-hypercholesterolemic Lipid Lowering Chol lowering
+Statin	Cholesterol medication Cholesterol lowering Statin Statins Anti-hypercholesterolemic Lipid Lowering Chol lowering
+Statins	Cholesterol medication Cholesterol lowering Anti-cholesterol Statin Anti-hypercholesterolemic Lipid Lowering Chol lowering
+Anti-hypercholesterolemic	Cholesterol medication Cholesterol lowering Anti-cholesterol Statin Statins Lipid Lowering Chol lowering
+Lipid Lowering	Anti-hypercholesterolemic Cholesterol medication Cholesterol lowering Anti-cholesterol Statin Statins Chol lowering
+Chol lowering	Lipid Lowering Anti-hypercholesterolemic Cholesterol medication Cholesterol lowering Anti-cholesterol Statin Statins
+LDL	Low density lipoprotein high density lipoprotein HDL total cholestrol Triglycerides Trigs
+HDL	Low density lipoprotein high density lipoprotein LDL total cholestrol Triglycerides Trigs
+Low density lipoprotein	LDL high density lipoprotein HDL total cholestrol Triglycerides Trigs
+high density lipoprotein	LDL Low density lipoprotein HDL total cholestrol Triglycerides Trigs
+Triglycerides	high density lipoprotein LDL Low density lipoprotein HDL total cholestrol Trigs
+Trigs	Triglycerides high density lipoprotein LDL Low density lipoprotein HDL total cholestrol
+Chronic kidney disease	CKD Nephropathy
+CKD	Chronic kidney disease Nephropathy
+Nephropathy	CKD Chronic kidney disease
+Chronic Obstructive Pulmonary Disease	COPD Chronic lung disease
+COPD	Obstructive Pulmonary Disease Chronic lung disease
+Chronic lung disease	COPD Obstructive Pulmonary Disease
+Clotting disorder	Bleeding disorder Hematologic disorder Coagulation disorder
+Bleeding disorder	Clotting disorder Hematologic disorder Coagulation disorder
+Hematologic disorder	Bleeding disorder Clotting disorder Coagulation disorder
+Coagulation disorder	Hematologic disorder Bleeding disorder Clotting disorder
+Coronary artery bypass surgery	CABG Revascularization Coronary bypass
+CABG	Coronary artery bypass surgery Revascularization Coronary bypass
+Revascularization	CABG Coronary artery bypass surgery Coronary bypass
+Coronary bypass	Revascularization CABG Coronary artery bypass surgery
+Coronary artery calcification	Coronary artery calcium CAC
+Coronary artery calcium	Coronary artery calcification CAC
+CAC	Coronary artery calcium Coronary artery calcification		
+Coronary heart disease	CHD Heart disease Coronary artery disease CAD
+CHD	Coronary heart disease Heart disease Coronary artery disease CAD
+Coronary hrt disease	CHD Coronary heart disease Heart disease Coronary artery disease CAD
+Heart disease	CHD Coronary heart disease Coronary artery disease CAD
+Coronary artery disease	Coronary heart disease CHD Heart disease CAD
+CAD	Coronary heart disease CHD Heart disease Coronary artery disease
+Coumadin	Warfarin Anti-coagulant Anticoagulant Blood thinner Blood thinning
+Warfarin	Coumadin Anti-coagulant Anticoagulant Blood thinner Blood thinning
+Anti-coagulant	Coumadin Warfarin Anticoagulant Blood thinner Blood thinning
+Anticoagulant	Coumadin Warfarin Anti-coagulant Blood thinner Blood thinning
+Blood thinner	Coumadin Warfarin Anti-coagulant Anticoagulant Blood thinning
+Blood thinning	Coumadin Warfarin Anti-coagulant Anticoagulant Blood thinner
+C-reactive protein	CRP
+CRP	C-reactive protein					
+Creatinine	Creat
+Creat	Creatinine
+Creatinine clearance	CCr CrCl serum creatinine
+CCr	CrCl Creatinine clearance serum creatinine
+CrCl	CCr Creatinine clearance serum creatinine
+Current 	Present Presently
+Depression	anti-depressants
+Present	Current Presently
+Presently	Current Present
+D-dimer	Ddimer D dimer
+Ddimer	D dimer D-dimer
+DTH	Death
+Def	Definite
+T2D	Diabetes
+Diab 	Diabetes T2D			
+Diabetes medication	Oral hypoglycemics Take insulin Taking insulin Diabetic medication Biguanides Antidiabetic
+Oral hypoglycemics	Diabetes medication Take insulin Taking insulin Diabetic medication Biguanides Antidiabetic
+Take insulin	Diabetes medication Oral hypoglycemics Taking insulin Diabetic medication Biguanides Antidiabetic
+Taking insulin	Diabetes medication Oral hypoglycemics Take insulin Taking insulin Diabetic medication Biguanides Antidiabetic
+Diabetic medication	Diabetes medication Oral hypoglycemics Take insulin Taking insulin Biguanides Antidiabetic
+Biguanides	Diabetes medication Oral hypoglycemics Take insulin Taking insulin Diabetic medication Biguanides Antidiabetic
+Antidiabetic	Diabetes medication Oral hypoglycemics Take insulin Taking insulin Diabetic medication Biguanides Antidiabetic
+Dx	Diagnosis
+Diag	Diagnosis Dx			
+Diastolic Blood Pressure	DBP Diastolic
+DBP	Diastolic Blood Pressure Diastolic
+Diastolic	DBP Diastolic Blood Pressure	
+DPLR	Doppler			
+Electrocardiogram	EKG ECG
+ECG	Electrocardiogram EKG
+EKG	ECG Electrocardiogram
+Endpt	Endpoint
+Eos	Eosinophils Eosin
+Eosinophils	Eosin Eos
+Eosin	Eosinophils Eos	
+FactorVII	Factor7
+Factor7	FactorVII				
+FactorVIII	Factor8
+Factor8	FactorVIII			
+Forced expiratory volume	FEV
+FEV	Forced expiratory volume				
+Forced vital capacity	FVC
+FVC	Forced vital capacity				
+Glomerular Filtration Rate	GFR eGFR
+GFR	Glomerular Filtration Rate eGFR
+eGFR	GFR Glomerular Filtration Rate
+Glu	Glucose
+Gluc	Glucose
+HRT failure	Heart failure CHF				
+Heart failure	CHF
+CHF	Heart failure
+HRT Rate	Heart rate Heart Pulse	
+HR	Heart rate Heart Pulse
+Pulse	Heart rate Heart Rate
+Ht	Height
+Hgt	Height			
+Hematocrit	HCT
+HCT	Hematocrit				
+Hemoglobin	HGB
+HGB	Hemoglobin
+Haemoglobin	Hemoglobin
+Hemoglobin A1c	HbA1c Glycated hemoglobin Glycosylated hemoglobin 
+HbA1c	Hemoglobin A1c Glycated hemoglobin Glycosylated hemoglobin
+Glycated hemoglobin	HbA1c Hemoglobin A1c Glycated hemoglobin Glycosylated hemoglobin
+Glycosylated hemoglobin	Hemoglobin A1c HbA1c Glycated hemoglobin
+Haemoglobin A1c	Hemoglobin A1c HbA1c Glycated hemoglobin Glycosylated hemoglobin
+Glycated haemoglobin	Hemoglobin A1c HbA1c Glycated hemoglobin Glycosylated hemoglobin
+Glycosylated haemoblobin	Hemoglobin A1c HbA1c Glycated hemoglobin Glycosylated hemoglobin
+Hi	High					
+High density lipoprotein cholesterol	HDL
+HDL	High density lipoprotein cholesterol				
+Hip circumference	Hip girth
+Hip girth	Hip circumference					
+Hx	History			
+Hcy	Homocysteine							
+Hormone replacement therapy	Estrogen Female hormone
+HRT	Hormone replacement therapy Estrogen Female hormone
+Estrogen	Hormone replacement therapy Estrogen Female hormone
+Female hormone 	Estrogen Hormone replacement therapy Estrogen
+HTN	Hypertension High blood pressure HBP
+High blood pressure	Hypertension High blood pressure HBP
+Hypertension	High blood pressure HBP HTN
+HBP	Hypertension HTN High blood pressure		
+Hypertension medication	Antihypertensives High blood pressure medication HBP medication HTN medication Hypertension med High blood pressure med HBP med HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+Antihypertensives	Hypertension medication High blood pressure medication HBP medication HTN medication Hypertension med High blood pressure med HBP med HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication 
+High blood pressure medication	Hypertension medication Antihypertensives HBP medication HTN medication Hypertension med High blood pressure med HBP med HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+HBP medication	Hypertension medication Antihypertensives High blood pressure medication HTN medication Hypertension med High blood pressure med HBP med HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+HTN medication	HBP medication Hypertension medication Antihypertensives High blood pressure medication Hypertension med High blood pressure med HBP med HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+Hypertension med	HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication High blood pressure med HBP med HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+High blood pressure med	Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication HBP med HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+HBP med	High blood pressure med Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication HTN med Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+HTN med	HBP med High blood pressure med Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication Hypertension medicine HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+Hypertension medicine	HTN med HBP med High blood pressure med Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication HTN medicine HBP medicine High blood pressure medicine Hypertension medication
+HTN medicine	Hypertension medicine HTN med HBP med High blood pressure med Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication HBP medicine High blood pressure medicine Hypertension medication
+HBP medicine	HTN medicine Hypertension medicine HTN med HBP med High blood pressure med Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication High blood pressure medicine Hypertension medication
+High blood pressure medicine	HBP medicine HTN medicine Hypertension medicine HTN med HBP med High blood pressure med Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication Hypertension medication
+Hypertension medication	High blood pressure medicine HBP medicine HTN medicine Hypertension medicine HTN med HBP med High blood pressure med Hypertension med HTN medication HBP medication Hypertension medication Antihypertensives High blood pressure medication
+Inc	Incident										
+Ins	Insulin
+IL-6	Interleukin-6 IL6
+IL6	IL-6 Interleukin-6 IL6								
+Interval	Duration
+Duration	Interval											
+Intima media thickness	Intimal media thickness IMT
+Intimal media thickness	Intima media thickness IMT
+IMT	Intimal media thickness Intima media thickness								
+Intracellular adhesion molecule 1	ICAM1 ICAM-1 ICAM
+ICAM1	Intracellular adhesion molecule 1 ICAM-1 ICAM
+ICAM-1	ICAM1 Intracellular adhesion molecule 1 ICAM
+Left ventricular hypertrophy	LVH LV hypertrophy
+LVH	Left ventricular hypertrophy LVH LV hypertrophy
+LV hypertrophy	Left ventricular hypertrophy LVH LV hypertrophy
+Left ventricular mass	LVM LV mass
+LVM	Left ventricular mass LV mass
+LV mass	Left ventricular mass LVM
+Low density lipoprotein	cholesterol LDL
+cholesterol	Low density lipoprotein LDL
+Lymphs	Lymphocytes							
+Lymphocytes	Lymphs											
+Mean arterial pressure	MAP
+MAP	Mean arterial pressure									
+Mean Corpuscular Volume	MCV
+MCV	Mean Corpuscular Volume						
+Medication	Med Medicine
+Med	Medication Medicine			
+Menarche	First period Menstruation began
+Menstruation began	Menarche First period
+First period	Menstruation began Menarche
+Menopause	Menstruation stopped Periods stopped Periods ceased Menses stopped Menses ceased Menstruation stopped Menstruation ceased
+Menstruation stopped	Menopause Periods stopped Periods ceased Menses stopped Menses ceased Menstruation stopped Menstruation ceased
+Periods stopped	Menopause Menstruation stopped Periods ceased Menses stopped Menses ceased Menstruation stopped Menstruation ceased
+Periods ceased	Menopause Menstruation stopped Periods stopped Menses stopped Menses ceased Menstruation stopped Menstruation ceased
+Menses stopped	Menopause Menstruation stopped Periods stopped Periods ceased Menses ceased Menstruation stopped Menstruation ceased
+Menses ceased	Menopause Menstruation stopped Periods stopped Periods ceased Menses stopped Menstruation stopped Menstruation ceased
+Menstruation stopped	Menopause Menstruation stopped Periods stopped Periods ceased Menses stopped Menses ceased Menstruation ceased
+Menstruation ceased	Menopause Menstruation stopped Periods stopped Periods ceased Menses stopped Menses ceased Menstruation stopped
+Menstruation	Menopause Periods Menses
+Menopause	Menstruation Periods Menses
+Periods	Menopause Menstruation Menses
+Menses	Periods Menopause Menstruation	
+Monocyte chemoattractant protein1	MCP1			
+Monocyte Chemotactic Protein 1	MCP1
+MCP1	Monocyte chemoattractant protein1 Monocyte Chemotactic Protein 1
+Monocytes	Mono Monos
+Mono	Monocytes Monos
+Monos	Mono Monocytes
+Myocardial infarction	MI Heart attack myocard infarc infarct Heart Attck
+MI	Myocardial infarction Heart attack myocard infarc infarct Heart Attck
+Heart attack 	Myocardial infarction MI myocard infarc infarct Heart Attck
+myocard infarc	Myocardial infarction MI Heart attack infarct Heart Attck
+infarct Heart Attck	Myocardial infarction MI Heart attack myocard infarc
+HRT Attack	Myocardial infarction MI Heart attack myocard infarc infarct Heart Attck
+Number	Num #
+#	Number Num
+Num	# Number							
+per day	/
+/	per day						
+Percent	% Prct Prcnt
+%	Percent Prct Prcnt
+Prct	Percent % Prcnt
+Prcnt	Percent % Prct	
+Peripheral artery disease	PAD
+PAD	Peripheral artery disease					
+Platelet count	Platelet Platelets
+Platelets	Platelet count Platelet
+Platelet	Platelets Platelet count		
+P-R	PR						
+Prevalent	Prevlnt Ever had
+Ever had	Prevalent Prevlnt
+Prevlnt	Prevalent Ever had			
+Probable	Prob										
+P-selectin	Psel										
+Q-T	QT QTDur
+QT	Q-T QTDur
+QTDur	QT Q-T									
+Race	Ethnicity
+Ethnicity	Race
+Red blood cell count	RBC red blood count red cell count red cells
+RBC 	Red blood cell count red blood count red cell count red cells
+red blood count	Red blood cell count RBC  red cell count red cells
+red cell count	Red blood cell count RBC red blood count  red cells
+red cells	Red blood cell count RBC red blood count red cell count
+R-R	RR										
+Saturated fatty acids	SFA
+SFA	Saturated fatty acids								
+Sex	Gender
+Gender	Sex
+Smoking	Smoker Smoke Smoked
+Smoking pack years	number of cigarretes number of packs years smoked age started smoking age stopped smoking							
+Subcutaneous adipose tissue	SAT
+SAT	Subcutaneous adipose tissue									
+Systolic blood pressure	SBP Systolic
+SBP	Systolic blood pressure Systolic
+Systolic	Systolic blood pressure SBP						
+Thromb	Thrombosis
+Thrombosis	Thromb										
+Tot	Total										
+Total cholesterol	Total chol TC									
+Transient ischemic attack	TIA stroke
+TIA	Transient ischemic attack stroke
+stroke	TIA Transient ischemic attack						
+Triglycerides	Trigs Trig
+Trigs	Triglycerides Trig
+Trig	Triglycerides Trigs
+Venous Thromboembolic Disease	VTE Deep vein thrombosis Pulmonary embolus Blood clot
+VTE	Venous Thromboembolic Disease Deep vein thrombosis Pulmonary embolus Blood clot
+Pulmonary embolus Blood clot	VTE Venous Thromboembolic Disease Deep vein thrombosis
+Ventricular	VENTR
+VENTR	Ventricular
+VAT	Visceral adipose tissue
+Visceral adipose tissue	VAT
+vWF	von Willebrand Factor
+von Willebrand Factor	vWF			
+Waist circumference	Waist girth			
+Waist-to-Hip ratio	WHR Waist hip ratio
+WHR	Waist-to-Hip ratio Waist hip ratio
+Waist hip ratio	WHR Waist-to-Hip ratio
+Wk	Week		
+Wt	Weight
+Wgt	Weight	
+White blood cell count	WBC White blood count White cell count White cells
+WBC	White blood cell count White blood count White cell count White cells
+White blood count	White blood cell count WBC White cell count White cells
+White cell count	White blood cell count WBC White blood count White cells
+White cells	White blood cell count WBC White blood count White cell count	
+Yr	Year

@@ -1,0 +1,62 @@
+<!-- 
+ * Copyright 2012 University of Southern California
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+-->
+
+<!-- 
+ * File for Displaying an alert Page when the session expired due to idle
+ * 
+ * @author Serban Voinea
+ * 
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PhenoExplorer</title>
+	<link rel="stylesheet" type="text/css" href="pfindr.css">
+</head>
+<body>
+<div class="content">
+
+<!-- LOGO DIV -->
+<div>
+<img alt="NHLBI logo" title="NHLBI" src="images/HL-logo.jpg" height="75" />
+<img alt="USC logo" title="USC" src="images/usc-primaryshieldwordmark.png" height="75" />
+<img alt="UNC logo" title="UNC" src="images/UNC blue_spot542.jpg" width="215" height="75" />
+</div>
+<!-- END LOGO DIV -->
+
+<div style="height:100px;">
+</div>
+
+<p class="error">
+<b>Your session has expired due to inactivity.</b>
+</p>
+
+<h1>Log In</h1>
+
+<form enctype="application/x-www-form-urlencoded" action="/pfindr/login" method="POST" >
+<table>
+  <tr><td>Username: <input type="text" name="username" size="15" /></td></tr>
+  <tr><td>Password: <input type="password" name="password" size="15" /></td></tr>
+  <tr><td><input type="submit" value="Login" /></td></tr>
+</table>
+</form>
+</div>
+
+</body>
+</html>

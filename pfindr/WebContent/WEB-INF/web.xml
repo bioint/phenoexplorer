@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ * Copyright 2012 University of Southern California
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+-->
+<!-- 
+ * File for Query Tool Web Container
+ * 
+ * @author Serban Voinea
+ * 
+-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>pfindr</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <display-name>Query Tool</display-name>
+  <servlet>
+    <servlet-name>Query</servlet-name>
+    <servlet-class>edu.isi.pfindr.servlets.QueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Query</servlet-name>
+    <url-pattern>/query</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>edu.isi.pfindr.servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>edu.isi.pfindr.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Role</servlet-name>
+    <servlet-class>edu.isi.pfindr.servlets.RoleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Role</servlet-name>
+    <url-pattern>/role</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Definer</servlet-name>
+    <servlet-class>edu.isi.pfindr.servlets.DefinerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Definer</servlet-name>
+    <url-pattern>/define</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Explorer</servlet-name>
+    <servlet-class>edu.isi.pfindr.servlets.ExplorerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Explorer</servlet-name>
+    <url-pattern>/explore</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Echo</servlet-name>
+    <servlet-class>edu.isi.pfindr.servlets.Echo</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <filter>
+    <filter-name>RoleFilter</filter-name>
+    <filter-class>edu.isi.pfindr.filters.RoleFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RoleFilter</filter-name>
+    <url-pattern>/role</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>DefinerFilter</filter-name>
+    <filter-class>edu.isi.pfindr.filters.DefinerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>DefinerFilter</filter-name>
+    <url-pattern>/define</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>ExplorerFilter</filter-name>
+    <filter-class>edu.isi.pfindr.filters.ExplorerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ExplorerFilter</filter-name>
+    <url-pattern>/explore</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>QueryFilter</filter-name>
+    <filter-class>edu.isi.pfindr.filters.QueryFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>QueryFilter</filter-name>
+    <url-pattern>/query</url-pattern>
+  </filter-mapping>
+  <resource-ref>
+    <description>postgreSQL Datasource example</description>
+    <res-ref-name>jdbc/pfindr</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <resource-ref>
+    <description>Mail Server</description>
+    <res-ref-name>mail/isi</res-ref-name>
+    <res-type>javax.mail.Session</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+  <listener>
+    <listener-class>edu.isi.pfindr.listeners.SessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>edu.isi.pfindr.listeners.ApplicationContextListener</listener-class>
+  </listener>
+  
+   <context-param>
+     <param-name>dbUrl</param-name>
+     <param-value>***put URL including db name *** </param-value>
+   </context-param>
+   <context-param>
+     <param-name>dbUserName</param-name>
+     <param-value>*******</param-value>
+   </context-param>
+   <context-param>
+     <param-name>dbPassword</param-name>
+     <param-value>********</param-value>
+   </context-param>
+   <context-param>
+     <param-name>driverclass</param-name>
+     <param-value>*******</param-value>
+   </context-param>
+   <context-param>
+     <param-name>recaptchaPrivateKey</param-name>
+     <param-value>*******</param-value>
+   </context-param>
+</web-app>

@@ -1,0 +1,426 @@
+/*
+ * Copyright 2012 University of Southern California
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Style sheet for Query Tool Page
+ * 
+ * @author Serban Voinea
+ * 
+ */
+
+.query_input {
+	height:20px;
+	width:496px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#6464FF;
+	margin-top:2px;
+}
+
+.hint {
+	border-width:1px;
+	border-style:solid;
+	border-color:#C8C8C8;
+}
+
+ul.hint {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: none;
+	width: 496px;
+	background-color: white; 
+}
+
+#query_span li:hover {
+	background: #F0F0F0; 
+	cursor: pointer;
+}
+
+li.tree {
+    white-space:nowrap;
+}
+
+#study_div td, #category_div td {
+    white-space:nowrap;
+}
+
+input.search {
+	background: url(search.png)  no-repeat center;
+}
+
+img.margin {
+	margin: 0px 5px -5px 5px;
+}
+
+div.tree_view {
+	width:100%;
+	overflow:auto;
+}
+
+h3.query-header {
+	text-align:center;
+	margin: 0px;
+}
+
+.float_left {
+	float:left;
+}
+
+div.query_results, table.score, div.flat_result {
+	width:100%;
+}
+
+div.global_menu {
+	margin-right:10px;
+}
+
+div.predicate_div {
+	width:100%;
+	margin-top:20px;
+}
+
+div.predicate_wrapper {
+	width:100%;
+	overflow:auto;
+}
+
+table.predicate {
+	display:none;
+}
+
+div.highlighted {
+	background-color: #ECFFB3;
+	cursor: pointer;
+}
+
+td.range {
+	background: #8E8E8E;
+}
+
+label.node_margin {
+	margin-right:2px;
+	margin-left:2px;
+}
+
+label.highlighted {
+	background-color: #ECFFB3;
+}
+
+label.drophover {
+	background-color: #DDDDFF;
+	z-index:1;
+}
+
+div.page_navigation {
+    white-space:nowrap;
+}
+
+span.node_description:hover {
+	cursor: pointer;
+}
+
+div.topnav span { /*--Drop down trigger styles--*/
+	width: 10px;
+	height: 10px;
+	/* background: url(images/arrow_down.gif)  no-repeat center top; */
+}
+
+div.topnav span.subhover {cursor: pointer;} /*--Hover effect for trigger--*/
+
+div.topnav ul.subnav {
+	list-style: none;
+	float: left;
+	position: absolute;
+	background: #CACACA;
+	margin: 0px;
+	padding: 0px;
+	display: none;
+	width: 180px;
+	border: 1px solid #FFFFFF;
+	z-index:1;
+}
+
+div.topnav ul.subnav li {
+	margin: 0px;
+	padding: 0px;
+	border-top: 1px solid #FFFFFF; /*--Create bevel effect--*/
+	border-bottom: 1px solid #FFFFFF; /*--Create bevel effect--*/
+	clear: both;
+	width: 180px;
+	text-align: left;
+	font-weight: normal;
+}
+
+li.highlighted { /*--Hover effect for subnav links--*/
+	background: #8E8E8E; 
+	cursor: pointer;
+}
+
+ul.tree_border {
+	border-width:1px;
+	border-style:solid;
+	border-color:silver;
+	width:100%;
+}
+
+p.error {
+	color:red;
+}
+
+p.success {
+	color:green;
+}
+
+a.link-style:link {
+	text-decoration:none;
+	color: #024A68;
+}
+
+a.link-style:visited {
+	text-decoration:none;
+	color: #800000;
+}
+
+a.link-style:hover {
+	/*text-decoration:underline;*/
+	color: #800000;
+}
+
+a.mailto {
+	text-decoration:none;
+	color: #800000;
+}
+
+.banner-text {
+	font-size: 0.88em !important;
+	font-weight: bold;
+	font-family: georgia, trebichet ms, serif;
+}
+
+div.score_slider {
+	margin: 10px;
+}
+
+td.actions {
+	background: #EEEEEE;
+	font-weight: bold;
+	border: 1px solid #CCCCCC;
+}
+
+td.link {
+	color: blue;
+	text-decoration: underline;
+}
+
+td.link:hover {
+	cursor: pointer;
+}
+
+.fieldset {
+	-moz-border-radius: 0.31em;
+	-webkit-border-radius: 0.31em;
+	width: 99%;
+	border:0.13em solid #024A68;
+	/*background-color: #eee; */ /*#D3D3D3;*/
+	margin:0.21em;
+	padding:0.51em;
+	background-color: #FFFFFF; /*#eee;  #E4F2F2;#D3F1F1;*/
+}
+
+.fieldset legend {
+	margin-left: 1em;
+	/*font-family: geneva, arial;;*/
+	font-family: georgia, trebichet ms, serif;
+	font-weight: bold;  
+	/* text-transform: uppercase;*/
+	font-size: 0.88em;  
+	padding: 0.2em 0.5em;
+  	border: 0.13em solid #024A68;
+  	/* color: #024A68; */
+  	/* background-color: #FFFFFF;*/
+}
+
+.fieldset legend a {
+	text-decoration: none;
+	/* color: #800000; */
+	cursor:pointer;
+}
+
+.labelcell {    
+ 	/*font-family: geneva, arial;;*/
+ 	font-family: georgia, trebichet ms, serif;
+	font-size: 0.88em;  
+ 	font-weight: bold; 
+ 	width: 30%;    
+ 	color: #024A68;
+ 	/*background-color: transparent;
+ 	background-color: #E4F2F2;*/
+ 	valign: top;
+ 	white-space:nowrap;
+}
+
+.select-style {
+	/*font-family: geneva, arial;;*/
+	font-family: georgia, trebichet ms, serif;
+	font-size: 0.88em; 
+ 	font-weight: bold;
+ 	color: #024A68;
+ 	border: 0.16em solid #024A68;
+ 	/* align: left; */
+}
+
+p.info, div.info {    
+ 		font-family: georgia, trebichet ms, serif;
+		font-size: 0.88em;  
+ 		color: #024A68;
+}
+
+p.info_small {    
+ 		font-family: georgia, trebichet ms, serif;
+		font-size: 0.88em;  
+ 		color: #024A68;
+}
+
+table.topmargin {
+  width: 100%;
+}
+table.topmargin td.logo {
+ text-align: left;
+}
+.authninfo {
+ text-align: right;
+  width: 10%;
+}
+
+#main {
+	margin-top: 0em;
+	background: #fff;
+	height: 100%;
+	font-family: georgia, trebichet ms, serif;
+}
+
+.home-text {
+	font-size: 1em;
+	font-family: georgia, trebichet ms, serif;
+	line-height: 150%;
+}
+
+.home-text a {
+	text-decoration: none;
+	color: #800000;
+	font-weight: bold;
+}
+
+.home-text a:hover {
+	text-decoration: underline;
+}
+
+.heading {
+	font-weight: bold;
+	font-size: 1.50em;
+	font-family: georgia, trebichet ms, serif;
+	display: block; /*display,position,overflow are required for margin-bottom to work, quite strangely*/
+	position: relative; /**/
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	margin-top: 0.7em;
+}
+
+.heading a {
+	text-decoration: none;
+	color: black;
+}
+
+.heading a:hover {
+	color: #800000;
+}
+
+.tabs-horizontal-line {
+	padding: 0;
+	width: 100%;
+	height:0.41em;
+	background: #024A68;
+	border-top: 0.06em solid #fff;
+}
+
+ul.noindent {
+	margin-left: 0em;
+	padding-left: 0em;
+	list-style: none;
+	margin-top: 0em;
+}
+
+.h1{
+	background: #F0F5F0;	
+	border-left: 2px solid #024A68;
+	border-top: 2px solid #024A68;
+	font-family: georgia, trebichet ms, serif;
+	padding-left: 5px;
+	padding-right: 20px;
+	text-align: justify;
+	display: block;
+	font-weight: bold;
+	margin: 0.67 0px;
+}
+
+#ajaxSpinnerContainer {
+	height:11px;
+	margin: 25px;
+}
+
+#ajaxSpinnerImage {
+	display:none;
+}
+
+ #columns {
+        width: 100%;
+}
+
+#columns .column {
+        position: relative;
+        width: 47%;
+        padding: 1%;
+        border: solid 1px white;
+}
+
+#columns .left {
+        float: left;
+}
+
+#columns .right {
+        float: right;
+}
+
+div.clear {
+	clear: both;
+}
+
+p.nospacing, ul.nospacing {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+div.note {    
+ 		font-family: georgia, trebichet ms, serif;
+		font-size: 0.88em;  
+        width: 45%;
+}
+
+a img { 
+	border: 0; 
+}
+

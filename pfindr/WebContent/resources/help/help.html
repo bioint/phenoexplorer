@@ -1,0 +1,1663 @@
+<!-- 
+ * Copyright 2012 University of Southern California
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+-->
+
+<!-- 
+ * Online Help for Query Tool Page
+ * 
+ * @author Serban Voinea
+ * 
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+	<link rel="stylesheet" type="text/css" href="help.css">
+	<title>PhenoExplorer</title>
+</head>
+
+<body>
+
+<h1>Query Tool</h1>
+
+<!-- TABLE OF CONTENT DIV -->
+
+<div>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#selectStudyCategory">Selecting a Study or a Category</a></li>
+<li><a href="#keywords">Query by Input Text</a></li>
+<li><a href="#scoreRange">Score Range</a></li>
+<li><a href="#usageTooltip">Usage Tooltip</a></li>
+<li><a href="#pageNavigation">Page Navigation</a></li>
+<li><a href="#tabularDisplay">Tabular Display</a></li>
+<li><a href="#actionsMenu">The Actions Menu</a></li>
+<li><a href="#newTemplate">Defining a New Template</a></li>
+<li><a href="#editTemplate">Editing a Template</a></li>
+<li><a href="#saveQuery">Saving Query Results</a></li>
+<li><a href="#queryTooltip">Query Results Tooltip</a></li>
+<li><a href="#queryBookmarks">Query Bookmarks</a></li>
+<li><a href="#queryHistory">Query History</a></li>
+<li><a href="#queryExportImport">Query Export/Import</a></li>
+<li><a href="#markCorrectIncorrect">Mark Selected Row(s) as Correct/Incorrect</a></li>
+<li><a href="#logout">Loging Out</a></li>
+</ol> 
+</div>
+
+<!-- END TABLE OF CONTENT DIV -->
+
+<!-- OVERVIEW SECTION -->
+
+<p>
+<a name="overview"></a>
+</p>
+
+<h1>Overview</h1>
+
+<p>
+The query tool enables biomedical researchers to find epidemiologically comparable phenotypes across 
+multiple studies. The user is first presented with the Login page (see Figure 1):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Login" title="Login" src="images/login.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 1.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Once he enters his credentials, he will be directed to the query page (see Figure 2):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Overview" title="Overview" src="images/overview.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 2.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The query interface design provides four major dimensions for the query:
+
+<br/>
+<ul>
+  <li><b>Study</b>: which studies are of interest. For example a user may be only interested in phenotypes from the ARIC and CHS studies</li>
+  <li><b>Category</b>: which classes of phenotypes are of interest</li>
+  <li><b>Pattern</b>: the user can write a free form text to be matched against the available phenotypes</li>
+  <li><b>Score Range</b>: the user selects the score range of the phenotypes of interest</li>
+</ul>
+
+<p>
+The user selects one or more studies of interest, one or more categories of interest, a score range,
+and/or inputs free form text (or makes no selections, which means no constraints in the dimensions). 
+In Figure 2, the query returned <b>29490</b> matches having the score range [0.5 - 1].
+
+<p>
+The logical conjunction operator is applied between the four dimensions, while for the selections 
+inside a study or category dimensions, the logical disjunction. For example, if the user selects the 
+<b>ARIC</b> and <b>CARDIA</b> studies, the <b>Age</b> and <b>Aspirin</b> categories, and enters the 
+pattern <b>antibiotics</b>, the query will return all the matches having the study equal to "ARIC" 
+<b>OR</b> "CARDIA", <b>AND</b> the category equal to "Age" <b>OR</b> "Aspirin", <b>AND</b> the 
+<b>description</b> containing the "antibiotics" substring.
+
+<p>
+The matching phenotype variables are displayed accordingly to a template. The predefined <b>flat</b> 
+template displays the results in a tabular format, a convenient and familiar display for many users. 
+The rest of the templates are displaying them hierarchically. For the <b>study</b> template, 
+the number of variables for each study and category are also displayed.
+
+<p>
+The studies contain hyper-links, in which case, by clicking them, their corresponding web sites 
+are opened. While the mouse is over a study, its full name is displayed in a tip box 
+(see Figure 3 when the mouse is over the <b>ARIC</b> study).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Study Over" title="Study Over" src="images/study_over.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 3.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END OF OVERVIEW SECTION -->
+
+<!-- SELECT STUDY/CATEGORY SECTION -->
+
+<p>
+<a name="selectStudyCategory"></a>
+</p>
+
+<h1>Selecting a Study or a Category</h1>
+
+<p>
+Once the mouse is over the <b>Studies</b> or <b>Categories</b> areas, it highlights them and 
+you might now make one or multiple selections (see Figure 4, when the mouse is over 
+the "Categories" area).
+ 
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Category Over" title="Category Over" src="images/category_over.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 4.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Each time the user selects some studies of interest, the system automatically filters the category 
+dimension to show only categories that contain variables from those studies. Similarly, when the user 
+selects some category, the system automatically filters the studies query dimension to only show 
+studies with phenotypes under such category. 
+
+<p>
+For example, when the user selects the <b>ANTI-PLATELET DRUGS</b> category, the studies list is 
+updated to <b>CHS</b>, <b>FHS</b>, <b>MESA</b>, as only these 3 studies have phenotypes under 
+the <b>ANTI-PLATELET DRUGS</b> category. Also, the query results are updated showing now a total of 
+only <b>21</b> matches for the <b>ANTI-PLATELET DRUGS</b> category (see Figure 5). 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Anti-platelet drugs" title="Anti-platelet drugs" src="images/anti_platelet_drugs.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 5.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Once the mouse leaves the <b>Categories</b> area, its list is updated to the selected categories 
+(<b>ANTI-PLATELET DRUGS</b> in our example), and now you might perform additional selections. 
+For example, if we select the <b>CHS</b> study, the query results will be updated, showing now 
+a total of only <b>12</b> matches for the <b>ANTI-PLATELET DRUGS</b> category <b>AND</b> 
+the <b>CHS</b> study (see Figure 6).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Anti-platelet drugs and CHS" title="Anti-platelet drugs and CHS" src="images/anti_platelet_drugs_chs.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 6.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Each time the mouse re-enters the categories/studies areas, it will show their available selections 
+under the constraint of the studies/categories selections. For example, in Figure 7, the mouse 
+re-enters the categories area, and its list shows now all the categories under the constraint 
+"study equal to <b>CHS</b>".
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="CHS and Anti-platelet drugs" title="CHS and Anti-platelet drugs" src="images/chs_anti_platelet_drugs.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 7.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Supposing now we select the <b>AGE AT DIAG OF DIABETES</b> category, the query results will be updated, 
+showing now a total of <b>14</b> matches for the category equal to <b>ANTI-PLATELET DRUGS</b> or 
+to <b>AGE AT DIAG OF DIABETES</b>, and the study equal to <b>CHS</b> (see Figure 8).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Anti-platelet drugs or Age and CHS" title="Anti-platelet drugs or Age and CHS" src="images/chs_anti_platelet_drugs_age.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 8.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+To select/deselect all the available studies or categories, check or uncheck the checkbox from 
+the corresponding title (see Figure 9 for checking all the available categories).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Check all" title="Check all" src="images/check_all.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 9.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END SELECT STUDY/CATEGORY SECTION -->
+
+<!-- KEYWORDS SECTION -->
+
+<p>
+<a name="keywords"></a>
+</p>
+
+<h1>Query by Input Text</h1>
+
+<p>
+The user can also query by an input arbitrary text. First he has to select one of the domains 
+(<b>description</b>, <b>variable</b> or <b>visit</b>). The system automatically suggests completions 
+of the input text based on the existing phenotype descriptions, variables or visits. For example 
+in Figure 10, the user selects the <b>description</b> domain and starts typing "aspirin". 
+As s/he types, suggestions such as "33: Now taking aspirin?" or "34a: Strength of aspirin in the pill" 
+appear under the search box. 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="asp" title="asp" src="images/asp.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 10.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The user does not necessarily need to choose from those suggestions. 
+In Figure 11, s/he simply finishes typing "aspirin", clicks the <b>Submit</b> button 
+and retrieves the 235 matching phenotypes. 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Aspirin" title="Aspirin" src="images/aspirin.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 11.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Alternatively, in Figure 12 the user accepts one of the suggestions "33: Now taking aspirin?", clicks 
+the <b>Submit</b> button, and finds out 2 matches that contain a phenotype mapped to such a description. 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Aspirin Effect" title="Aspirin Effect" src="images/aspirin_effect.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 12.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END KEYWORDS SECTION -->
+
+<!-- SCORE RANGE SECTION -->
+
+<p>
+<a name="scoreRange"></a>
+</p>
+
+<h1>Score Range</h1>
+
+<p>
+The user can also query by selecting a score range. He moves a slider until he gets the desired score 
+range and then s/he clicks the <b>Submit</b> button. The score measures the confidence of a mapping 
+phenotype. It has a value between <b>0</b> and <b>1</b>. By default, the system returns the mappings 
+with the score range [0.5 - 1]. In Figure 13, s/he selects the [0.75 - 1] score range, clicks the 
+<b>Submit</b> button and retrieves the 22696 matching phenotypes.  
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Score Range" title="Score Range" src="images/score_range.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 13.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END SCORE RANGE SECTION -->
+
+<!-- USAGE TOOLTIP SECTION -->
+
+<p>
+<a name="usageTooltip"></a>
+</p>
+
+<h1>Usage Tooltip</h1>
+
+<p>
+Information regarding the usage of the dimensions can be obtained when the mouse pointer is over its 
+title. A tip text box will be displayed with usage instructions. For example, Figure 14 shows the 
+usage instructions for the <b>Category</b> dimension.
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Usage Tooltip" title="Usage Tooltip" src="images/usage_tooltip.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 14.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END USAGE TOOLTIP SECTION -->
+
+<!-- PAGE NAVIGATION SECTION -->
+
+<p>
+<a name="pageNavigation"></a>
+</p>
+
+<h1>Page Navigation</h1>
+
+<p>
+Rather than showing all the results at a time, the interface allows the user to page throw 
+a selectable number of matches at a time (see Figure 15).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Page" title="Page" src="images/page.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 15.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The <img alt="Back" title="Back" src="images/back.jpg"/> and 
+<img alt="Forward" title="Forward" src="images/forward.jpg"/> buttons are for navigation to the 
+previous, respectively next page. They are visible only if such pages exit. For example, the 
+<img alt="Back" title="Back" src="images/back.jpg"/> button will not be present if the first page 
+is displayed, and the <img alt="Forward" title="Forward" src="images/forward.jpg"/> will not be 
+present if the last page is displayed.
+
+<p>
+You can set the number of matches per page through a drop-down list (see Figure 16). Seven values are 
+available in this respect: <b>10</b>, <b>25</b>, <b>50</b>, <b>100</b>, <b>500</b>, <b>1000</b> and 
+<b>5000</b>.
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Per Page" title="Per Page" src="images/per_page.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 16.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+You can navigate directly to a page by selecting a range of matches from a drop-down list 
+(see Figure 17). 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Range" title="Range" src="images/range.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 17.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+There are available up to 20 adiacent pages. Always, you might access the first page (see Figure 17) 
+and the last page (see Figure 18).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Range Last" title="Range last" src="images/range_last.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 18.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The matches are displayed in a structure using a template. You select the template from a drop-down 
+list (see Figure 19):   
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Templates" title="Templates" src="images/templates.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 19.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The <b>flat</b> template displays the matches in a tabular format, while the rest of the templates in 
+a tree format. For example, the <b>category</b> template uses the following structure:
+
+<p>
+<ul>
+  <li>category
+  <ul>
+    <li>study
+    <ul>
+      <li>varset | variable | description | visit
+      <ul>
+        <li>definer | score</li>
+      </ul>
+      </li>
+     </ul>
+     </li>
+   </ul>
+   </li>
+</ul>
+
+<p>
+while the <b>study</b> template uses the structure:
+
+<p>
+<ul>
+  <li>study
+  <ul>
+    <li>category
+    <ul>
+      <li>varset | variable | description | visit
+      <ul>
+        <li>definer | score</li>
+      </ul>
+      </li>
+     </ul>
+     </li>
+   </ul>
+   </li>
+</ul>
+
+<p>
+You have also the option to edit exiting templates or to define new templates through the 
+<b>Actions</b> menu.
+
+<!-- END PAGE NAVIGATION SECTION -->
+
+<!-- TABULAR DISPLAY SECTION -->
+
+<p>
+<a name="tabularDisplay"></a>
+</p>
+
+<h1>Tabular Display</h1>
+
+<p>
+The <b>flat</b> template allows flexible results display in the style of spreadsheets (Figure 20). 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Flat Display" title="Flat Display" src="images/flat_display.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 20.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The user can select the number of displayed entries per page 
+(<b>10</b>, <b>25</b>, <b>50</b>, <b>100</b>, <b>500</b>, <b>1000</b>, <b>5000</b> or <b>All</b>) and 
+can navigate through the pages (<b>First</b>, <b>Previous</b>, <b>Next</b>, <b>Last</b>) and up to 
+5 adiacent pages (see Figure 21):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Flat Per Page" title="Flat Per Page" src="images/flat_per_page.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 21.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The user can also sort (ascending or descending) the entries based on the column values by clicking 
+a column name. Figure 22 shows the <b>variable</b> column sorted in ascending mode: 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Variable Ascending" title="Variable Ascending" src="images/variable_asc.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 22.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+while Figure 23 shows the <b>variable</b> column sorted in descending mode.
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Variable Descending" title="Variable Descending" src="images/variable_desc.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 23.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Individually entries can be selected in a page-by-page basis using a check-box metaphor. 
+This selection capability enables further processing of the mappings. Currently, we have implemented 
+two actions with the selected entries: 
+
+<ul>
+<li>saving mappings of interest to a tab-separated file</li>
+<li>marking mappings as correct or incorrect</li>
+</ul>
+
+<!-- END TABULAR DISPLAY SECTION -->
+
+<!-- ACTIONS MENU SECTION -->
+
+<p>
+<a name="actionsMenu"></a>
+</p>
+
+<h1>The Actions Menu</h1>
+
+<p>
+Once you click the <b>Actions</b> menu, the following commands are available (see Figure 24):
+
+<p>
+<ul>
+	<li><b>Bookmark Query...</b>: bookmark a query of interest for later usage</li>
+	<li><b>Clear</b>: reset all the query predicates</li>
+	<li><b>Collapse All</b>: collapse all the tree nodes of the query results</li>
+	<li><b>Edit template...</b>: edit an existing template</li>
+	<li><b>Expand All</b>: expand all the tree nodes of the query results</li>
+	<li><b>Export Query...</b>: export a query into a file</li>
+	<li><b>Import Query...</b>: import a query from a file</li>
+	<li><b>Mark selected row(s) as correct...</b>: store the selected row(s) in the database as correct</li>
+	<li><b>Mark selected row(s) as incorrect...</b>: store the selected row(s) in the database as incorrect</li>
+	<li><b>New template...</b>: define a new template</li>
+	<li><b>Save selected result(s)...</b>: save the selected result(s) into a file</li>
+	<li><b>Save all results...</b>: save the query results into a file</li>
+</ul>
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Actions" title="Actions" src="images/actions.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 24.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END ACTIONS MENU SECTION -->
+
+<!-- NEW TEMPLATE SECTION -->
+
+<p>
+<a name="newTemplate"></a>
+</p>
+
+<h1>Defining a New Template</h1>
+
+<p>
+Once you select the <b>New template...</b> command from the <b>Actions</b> menu, the following 
+window shows up (see figure 25):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="New Template" title="New Template" src="images/new_template.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 25.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+By drag and drop operations, you might now change the position of any element in the tree structure. 
+For example, let's suppose we want to move <b>visit</b> after <b>score</b>. First, we drag 
+<b>visit</b>. Once the dragging operation starts, the <b>visit</b> element remains highlighted 
+in its original location, and a clone of it follows the mouse position (see Figure 26).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Drag" title="Drag" src="images/drag.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 26.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+We can drop it in any part of the tree structure. If no droppable element is highlighted, then it will 
+be inserted in the first position of the droppable level. For example, Figure 27 shows the new tree 
+structure when <b>visit</b> was dropped.
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Drop First" title="Drop First" src="images/drop_first.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 27.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+If a droppable element is highlighted during the drag operation, then the element will be dropped 
+after that highlighted droppable element. For example, in Figure 28, the <b>score</b> is highlighted:
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Drop" title="Drop" src="images/drop.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 28.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+If we drop <b>visit</b> now, it will be inserted after <b>score</b> (see Figure 29).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Drop After" title="Drop After" src="images/drop_after.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 29.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+A droppable element is highlighted if the draggable overlaps the droppable at least 50%.
+
+<p>
+Once you are done with the template structure, you provide a name for the new template and click 
+the <b>Save</b> button (see Figure 30).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="My Template" title="My Template" src="images/my_template_save.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 30.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The new template will be present now in the list of available templates (see Figure 31).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="My New Template" title="My New Template" src="images/my_template.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 31.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END NEW TEMPLATE SECTION -->
+
+<!-- EDIT TEMPLATE SECTION -->
+
+<p>
+<a name="editTemplate"></a>
+</p>
+
+<h1>Editing a Template</h1>
+
+<p>
+Once you select the <b>Edit template...</b> command from the <b>Actions</b> menu, the following window 
+shows up (see Figure 32):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Edit Template" title="Edit Template" src="images/edit_template.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 32.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+From the drop-down list of available templates, you select now the template you want to modify 
+(see Figure 33).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Edit Template List" title="Edit Template List" src="images/edit_template_list.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 33.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Supposing you have selected <b>study</b>, its tree structure will be displayed (see Figure 34).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Edit Study Template" title="Edit Study Template" src="images/edit_template_study.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 34.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+You might change its structure using the drag and drop operations as described in 
+<a href="#newTemplate">Defining a New Template</a>. Once you are done with the changes, 
+you click the <b>Save</b> button and its new structure will be used in displaying the query results.
+
+<!-- END EDIT TEMPLATE SECTION -->
+
+<!-- SAVE QUERY SECTION -->
+
+<p>
+<a name="saveQuery"></a>
+</p>
+
+<h1>Saving Query Results</h1>
+
+<p>
+Once you select the <b>Save all results...</b> command from the <b>Actions</b> menu, you might save 
+the query results in a spreadsheets style into a file. The default file name is <b>Results.txt</b>. 
+A File Browser opens and you might choose the location and/or the file name (see Figure 35):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Save" title="Save" src="images/save.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 35.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+In Figure 36, you might see the content of the saved file:
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="File" title="File" src="images/file.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 36.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+With the <b>flat</b> template, it is also possible to save only the selected entries by the 
+check-boxes. In that case, the user selects the <b>Save selected result(s)...</b> command from the 
+<b>Actions</b> menu, and the default file name is <b>SelectedResults.txt</b>.
+
+<!-- END SAVE QUERY SECTION -->
+
+<!-- QUERY TOOLTIP SECTION -->
+
+<p>
+<a name="queryTooltip"></a>
+</p>
+
+<h1>Query Results Tooltip</h1>
+
+<p>
+Information regarding the meaning of the query results values in a tree structure can be obtained by 
+clicking a value. A tip text box will be displayed with the name it represents. Once the mouse 
+leaves the value area, the tip box will be hidden. For example, in Figure 37, we clicked the value 
+"0.5921" (the last item in the concatenated string) and the tip text indicates it represents a 
+<b>score</b> value.
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Tooltip" title="Tooltip" src="images/tip.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 37.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END QUERY TOOLTIP SECTION -->
+
+<!-- QUERY BOOKMARKS SECTION -->
+
+<p>
+<a name="queryBookmarks"></a>
+</p>
+
+<h1>Query Bookmarks</h1>
+
+<p>
+Each user can bookmark a query of interest for later usage, similar to bookmarking pages in a 
+web browser. When the <b>Bookmark Query...</b> command is selected from the <b>Actions</b> menu, 
+a pop-up window shows up for the bookmark name (see Figure 38).
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Bookmark Name" title="Bookmark Name" src="images/bookmark_name.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 38.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The bookmarked queries can be seen by clicking the <b>Bookmarks</b> link from the top menu (see 
+Figure 39). The bookmarks are available only to the user who created them. A detailed description 
+of the query (the dimensions and values queried) as well as a timestamp with the bookmark creation 
+time are available. By clicking the link of a bookmark, the user gets the same results as when the 
+bookmark was created.
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Bookmarks" title="Bookmarks" src="images/bookmarks.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 39.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END QUERY BOOKMARKS SECTION -->
+
+<!-- QUERY HISTORY SECTION -->
+
+<p>
+<a name="queryHistory"></a>
+</p>
+
+<h1>Query History</h1>
+
+<p>
+A query history is kept during each user session. Figure 40 shows the page with the history of the 
+queries. It can be accessed by clicking the <b>History</b> link of the top menu. The most recent 
+queries are displayed at the top. Like in the bookmark page, a query description is available. 
+By clicking the link of a query number, the user gets the same results as  when the query was 
+submitted. The distinction between query bookmarks and query history is again inspired by web 
+browsers. A query bookmark is created by an explicit user action and it persists until deleted by 
+the user. The query history is maintained automatically by the system and is truncated at some point 
+based on storage limitations or other considerations. 
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="History" title="History" src="images/history.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 40.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<!-- END QUERY HISTORY SECTION -->
+
+<!-- QUERY EXPORT/IMPORT SECTION -->
+
+<p>
+<a name="queryExportImport"></a>
+</p>
+
+<h1>Query Export/Import</h1>
+
+<p>
+A user can also save a query in a file, either to keep a local copy on their own computer for later 
+loading or to share queries with other users. The mechanism works in a simple and robust manner. 
+First, the user exports a query into a file. He selects in this respect the <b>Export Query...</b> 
+command from the <b>Actions</b> menu. A File Browser opens and you might choose the location and/or 
+the file name (see Figure 41). The default file name is <b>Query.txt</b>.
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Query Export Name" title="Query Export Name" src="images/query_export_name.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 41.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+Then, s/he shares that file with another user (by emailing the query file as an attachment, 
+or any other file-sharing means). The receiving user imports the query into their PhenoExplorer 
+session by selecting the <b>Import Query...</b> command from the <b>Actions</b> menu. A File Browser 
+opens and you might choose the location and the file name (see Figure 42):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Query Import Name" title="Query Import Name" src="images/query_import_name.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 42.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+The same results are displayed as when the query was exported. It is important that the content of 
+the exported file should <b style="color:red;">not</b> be modified, as otherwise the 
+<b>Import Query...</b> operation might fail.
+
+<!-- END QUERY EXPORT/IMPORT SECTION -->
+
+<!-- MARK CORRECT/INCORRECT SECTION -->
+
+<p>
+<a name="markCorrectIncorrect"></a>
+</p>
+
+<h1>Mark Selected Row(s) as Correct/Incorrect</h1>
+
+<p>
+With the <b>flat</b> template, the selected entries by the check-boxes, might be marked as correct or 
+incorrect. In that case, the user selects the <b>Mark selected row(s) as correct...</b> or 
+<b>Mark selected row(s) as incorrect...</b> commands from the <b>Actions</b> menu. User feedback on 
+the correctness of a mapping is stored in our database and is used for further refinement and 
+training of the learning algorithm. Optional, the user can save these entries into a file.
+A pop-up windows shows up (see Figure 43 for the <b>Mark selected row(s) as correct...</b> 
+command):
+
+<p>
+<br/>
+</p>
+
+<table class="center">
+<thead>
+<tr>
+<th class="figure">
+<img alt="Mark Correct/Incorrect" title="Mark Correct/Incorrect" src="images/correct_incorrect.png"/>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">
+<b>Figure 43.</b>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<br/><br/><br/>
+</p>
+
+<p>
+If the users answers with <b>OK</b>, a File Browser opens and you might choose the location and/or 
+the file name. The default file name is <b>SelectedResults.txt</b>. 
+
+<!-- END MARK CORRECT/INCORRECT SECTION -->
+
+<!-- LOGOUT SECTION -->
+
+<p>
+<a name="logout"></a>
+</p>
+
+<h1>Logging Out</h1>
+
+<p>
+Once the user clicks the <b>Logout</b> link of the top menu, s/he is logged out and redirected 
+to the <b>Login</b> page.
+
+<!-- END LOGOUT SECTION -->
+
+</body>
+</html>
