@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: createTables
+Class-path: ./lib/postgresql-9.1-901.jdbc4.jar
+Created-By: Chenxi Zhang
